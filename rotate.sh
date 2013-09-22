@@ -39,7 +39,7 @@ else
     for i in `find $BACKUPDIRDEST/ -maxdepth 1 -type d -mtime +$NUMDAYS -print`;
     do
         echo -e "["$(date)"] - Found backup folder from $(stat -c %y $i)! Deleting directory $i";
-        #\rm -rf $i;
+        \rm -rf $i;
     done
   fi
 
